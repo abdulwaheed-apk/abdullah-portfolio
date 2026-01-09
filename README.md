@@ -1,36 +1,172 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Portfolio Website
 
-## Getting Started
+A modern, responsive portfolio website built with Next.js, React, and TypeScript. Features a beautiful dark theme, smooth animations, and a fully accessible design.
 
-First, run the development server:
+## ✨ Features
+
+- 🎨 Modern dark theme with custom color palette
+- 📱 Fully responsive design
+- ♿ WCAG 2.1 compliant accessibility
+- 🎭 Smooth animations and transitions
+- 📊 Interactive project showcases
+- 📧 Contact form with copy-to-clipboard functionality
+- 🎉 Confetti animations on interactions
+
+## 📋 Prerequisites
+
+### Node.js Installation
+
+#### **Linux (Ubuntu/Debian)**
+```bash
+node --version  # Check if installed
+
+# If not installed
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+sudo apt-get install -y nodejs
+```
+
+#### **macOS**
+```bash
+node --version  # Check if installed
+
+# If not installed
+brew install node
+```
+
+#### **Windows**
+1. Visit [Node.js official website](https://nodejs.org/)
+2. Download and install the LTS version
+3. Verify: `node --version` in Command Prompt
+
+### Package Manager
+
+This project uses **pnpm** or **bun**. Install one:
+
+#### **pnpm**
+
+**Linux/macOS:**
+```bash
+npm install -g pnpm
+# or
+curl -fsSL https://get.pnpm.io/install.sh | sh -
+```
+
+**Windows:**
+```powershell
+npm install -g pnpm
+# or
+iwr https://get.pnpm.io/install.ps1 -useb | iex
+```
+
+#### **bun**
+
+**Linux/macOS:**
+```bash
+curl -fsSL https://bun.sh/install | bash
+```
+
+**Windows:**
+```powershell
+powershell -c "irm bun.sh/install.ps1 | iex"
+```
+
+## 🛠️ Installation
 
 ```bash
-npm run dev
+git clone <repository-url>
+cd my-app
+
+pnpm install
 # or
-yarn dev
-# or
+bun install
+```
+
+## 🚀 Commands
+
+### Development
+```bash
 pnpm dev
 # or
 bun dev
 ```
+Open [http://localhost:3000](http://localhost:3000)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Build
+```bash
+pnpm build
+# or
+bun build
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Start
+```bash
+pnpm start
+# or
+bun start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📁 Project Structure
 
-## Learn More
+```
+my-app/
+├── app/              # Next.js app directory
+├── components/       # React components
+├── lib/              # Utility functions
+└── public/           # Static assets
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 🎨 Customization
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Colors
+Edit `app/globals.css`:
+```css
+:root {
+  --color-charcoal-black: #1C1C1C;
+  --color-electric-blue: #0066FF;
+  --color-cool-silver: #BFC5C9;
+  --color-pure-white: #FFFFFF;
+}
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Font
+Change in `app/layout.tsx`:
+```typescript
+import { YourFont } from "next/font/google";
+const yourFont = YourFont({
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  subsets: ["latin"],
+  variable: "--font-your-font",
+});
+```
 
-## Deploy on Vercel
+### Content
+Update personal information in component files:
+- `components/about-section.tsx` - Personal info
+- `components/experience-section.tsx` - Work experience
+- `components/skills-section.tsx` - Skills
+- `components/projects-section.tsx` - Projects
+- `components/contact-section.tsx` - Contact info
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🛠️ Tech Stack
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Framework**: Next.js 16
+- **UI Library**: React 19
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS 4
+- **Icons**: Tabler Icons
+- **Font**: Rubik
+- **Animations**: Custom CSS
+- **Confetti**: canvas-confetti
+
+## 📝 Available Scripts
+
+| Script | Description |
+|--------|-------------|
+| `install` | Install dependencies |
+| `dev` | Start development server |
+| `build` | Create production build |
+| `start` | Start production server |
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
